@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: webapi
-        image: localhost:5000/argotesting:latest
+        image: localhost:5000/argotesting:v1.0.1
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
