@@ -36,14 +36,12 @@ spec:
             memory: "256Mi"
             cpu: "500m"
         livenessProbe:
-          httpGet:
-            path: /WeatherForecast/GetWeatherForecast
+          tcpSocket:
             port: http
           initialDelaySeconds: 30
           periodSeconds: 10
         readinessProbe:
-          httpGet:
-            path: /WeatherForecast/GetWeatherForecast
+          tcpSocket:
             port: http
           initialDelaySeconds: 5
           periodSeconds: 5
